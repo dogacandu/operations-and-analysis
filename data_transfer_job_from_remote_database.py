@@ -32,7 +32,7 @@ def leadtransfer():
         SPLIT_PART(SPLIT_PART(signups.source,'utm_campaign',2),'"',3) as utm_campaign,case when left(signups.source,5) like '%b%' then 'Y' else ' ' end as cpn,now() 
         from signups join signers on signups.signer_id=signers.id join campaigns  on signups.campaign_id=campaigns.id 
         where signups.id >'{0}' """.format(maxid)
-	cursor.execute(query)
+	cur.execute(query)
         report=cur.fetchall()
         conn.close()
 	
