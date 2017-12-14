@@ -40,7 +40,7 @@ def leadtransfer():
 	dbconn= mysql.connector.connect(host='4x.xx.xxx.xx3',database='xxxx',port='3306', user='root',password='Jxxxo')
 	cursor=dbconn.cursor()
 	for row in report:
-		query='''insert into leads (Source_ID,email,first_name,last_name,phone_number,date_of_birth,campaign,signing_time,city,phone_ok,email_ok,sms_ok,utm_source,
+		query='''insert into lxxxs (Source_ID,email,first_name,last_name,phone_number,date_of_birth,campaign,signing_time,city,phone_ok,email_ok,sms_ok,utm_source,
 	    source,utm_campaign,cpn,created_time) values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'''
         cursor.execute(query,[row[0],row[1],row[2],row[3],row[4],row[5],row[6],row[7],row[8],row[9],row[10],row[11],row[12],row[13],row[14],row[15],row[16]])
         dbconn.commit()
