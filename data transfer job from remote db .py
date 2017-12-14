@@ -27,14 +27,14 @@ def leadtransfer():
 	conn.autocommit= True
 	cur=conn.cursor()
 	query="""  SELECT signups.id,signers.email,signers.first_name,signers.last_name,signers.phone_number,signers.date_of_birth,
-    case when signups.extra LIKE '%leadsbridge%' then concat('lc_',campaigns.name) else campaigns.name end ,signups.updated_at,signers.city,
-    signers.phone_ok,signers.email_ok,signers.sms_ok,SPLIT_PART(SPLIT_PART(signups.source,'utm_source',2),'"',3) as utm_campaign,signups.source,
-    SPLIT_PART(SPLIT_PART(signups.source,'utm_campaign',2),'"',3) as utm_campaign,case when left(signups.source,5) like '%b%' then 'Y' else ' ' end as cpn,now() 
-    from signups join signers on signups.signer_id=signers.id join campaigns  on signups.campaign_id=campaigns.id 
-    where signups.id >'{0}' """.format(maxid)
+        case when signups.extra LIKE '%leadsbridge%' then concat('lc_',campaigns.name) else campaigns.name end ,signups.updated_at,signers.city,
+        signers.phone_ok,signers.email_ok,signers.sms_ok,SPLIT_PART(SPLIT_PART(signups.source,'utm_source',2),'"',3) as utm_campaign,signups.source,
+        SPLIT_PART(SPLIT_PART(signups.source,'utm_campaign',2),'"',3) as utm_campaign,case when left(signups.source,5) like '%b%' then 'Y' else ' ' end as cpn,now() 
+        from signups join signers on signups.signer_id=signers.id join campaigns  on signups.campaign_id=campaigns.id 
+        where signups.id >'{0}' """.format(maxid)
 	cursor.execute(query)
-    report=cur.fetchall()
-    conn.close()
+        report=cur.fetchall()
+        conn.close()
 	
 	# insert the data to mysql table in another remote server
 	dbconn= mysql.connector.connect(host='4x.xx.xxx.xx3',database='xxxx',port='3306', user='root',password='Jxxxo')
