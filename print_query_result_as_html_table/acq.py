@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import cgi   # used to handle parameters from html form send via post method
+import cgi   # used to handle parameters from html form sent via post method
 import cgitb   
 cgitb.enable() 
 form=cgi.FieldStorage()
