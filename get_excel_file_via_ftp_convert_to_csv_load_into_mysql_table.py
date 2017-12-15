@@ -19,7 +19,7 @@ my_csv_file.close()
 path_to_csvfile='C:/Users/../reports/'+yesterday_csvfile
 dbconn= mysql.connector.connect(host='localhost',database='rxxxa',user='root',password='Jxxxo')  # connect mysql
 cursor=dbconn.cursor()
-query=('''LOAD DATA INFILE %s INTO TABLE reportschema.callcenter_data FIELDS TERMINATED BY ','    
+query=('''LOAD DATA INFILE %s INTO TABLE rxxxa.callcenter_data FIELDS TERMINATED BY ','    
 ENCLOSED BY '"' LINES TERMINATED BY '\r\n' IGNORE 1 ROWS ''')       
 cursor.execute(query,[path_to_csvfile])                    # load csv file into a mysql table
 dbconn.commit()                                            # commit 
