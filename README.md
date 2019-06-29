@@ -2,7 +2,7 @@
 some examples of my work on data analysis, visualization and management with python includes:
 
 
--- FantasyBasketball: here I analysed made up Euroleuge basketball data and build models to predict player price. 
+-- FantasyBasketball: here I analysed fantasy Euroleuge basketball data and build models to predict player price. 
 
 --  turkey sound  : here I analysed a kaggle competition which is about identifying turkey sound using audio embedded 
 youtube videos
