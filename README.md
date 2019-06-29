@@ -13,10 +13,10 @@ the browser
 
 -- data transfer job from remote database
 
--- get_excel_file_via_ftp_convert_to_csv_load_into_mysql_table 
+-- get excel file via ftp convert to csv load into mysql table 
 
--- handle_post_request_with_python_deploy_on_apache2.py 
+-- handle post request with python deploy on apache2
 
---  turkey_sound  : here I analysed a kaggle competition which is about identifying turkey sound using audio embedded 
+--  turkey sound  : here I analysed a kaggle competition which is about identifying turkey sound using audio embedded 
 youtube videos
 
