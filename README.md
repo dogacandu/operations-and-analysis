@@ -1,6 +1,7 @@
 # operations-and-analysis
 some examples of my work on data analysis, visualization and management with python includes:
 
+-- Shortest Path : I find shortest path between two nodes using Q-Learning algorithm
 
 -- FantasyBasketball: here I analysed fantasy Euroleuge basketball data and build models to predict player price. 
 
